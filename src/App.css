@@ -1,38 +1,447 @@
-.App {
-  text-align: center;
+
+*{
+
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn{
+ position: absolute;
+ top: 15px;
+ left: 45px;
+ height: 45px;
+ width: 45px;
+ text-align: center;
+ background: #1b1b1b;
+ border-radius: 3px;
+ cursor: pointer;
+
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn.click{
+
+  left: 260px;
+
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.btn span{
+
+color:white;
+font-size: 28px;
+line-height: 45;
+
+
+}
+
+
+
+.sidebar{
+position: fixed;
+width: 250px;
+height: 100%;
+
+
+background: #1b1b1b;
+overflow-y: scroll;
+z-index: 999;
+
+}
+
+.sidebar .text{
+color: white;
+font-size: 25px;
+font-weight: 600;
+line-height: 65px;
+text-align: center;
+background: lightsteelblue;
+letter-spacing: 1px;
+
+}
+
+
+nav ul{
+
+background: 1b1b1b;
+height: 100%;
+width: 80%;
+list-style:none;
+
+}
+
+nav ul li{
+
+  line-height: 60px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+
+
+}
+
+nav ul li:last-child{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  ;
+}
+
+nav ul li a{
+  position: relative;
   color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li.active a{
+
+color: cyan;
+background: rgb(42, 26, 104);
+border-left-color: cyan;
+
+
+}
+nav ul ul{
+  position: static;
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav ul .prod-show.show{
+  display: block;
+}
+
+nav ul .cate-show.show1{
+  display: block;
+}
+nav ul .orde-show.show2{
+  display: block;
+}
+nav ul .cust-show.show3{
+  display: block;
+}
+nav ul .prom-show.show4{
+  display: block;
+}
+
+nav ul .inve-show.show5{
+  display: block;
+}
+nav ul .acco-show.show6{
+  display: block;
+}
+
+
+nav ul .app-show.show7{
+  display: block;
+}
+
+
+nav ul .uico-show.show8{
+  display: block;
+}
+
+nav ul .auth-show.show9{
+  display: block;
+}
+
+nav ul .othe-show.show10{
+  display: block;
+}
+
+
+
+
+
+nav ul ul li{
+  line-height: 30px;
+  border-bottom: none;
+}
+
+
+
+nav ul ul li a{
+
+font-size: 17px;
+color: #e6e6e6;
+
+padding-left: 80px;
+
+}
+
+nav ul li.active ul li a{
+
+  color: #e6e6e6;
+  background: rgb(36, 63, 59);
+  border-left-color: transparent;
+  
+  
   }
-  to {
-    transform: rotate(360deg);
+
+  nav ul ul li a:hover{
+      color: cyan!important;
+      background: rgba(223, 184, 55, 0.644)!important ;
+
   }
+
+nav ul  li a span{
+
+position: absolute;
+top: 50%;
+right: 20px;
+transform: translateY(-50%);
+font-size: 22px;
+transition: transform 0.4s;
+
+}
+
+
+
+
+nav ul  li a:hover span{
+
+transform: translateY(-50%) rotate(-180deg);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <top bar> */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat;
+  box-sizing: border-box;
+}
+
+nav {
+  background: #864947;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul1 {
+  float: right;
+  margin-right: 42px;
+
+}
+
+nav ul1 li1 {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul1 li1 a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover,
+a.active:hover {
+  background: #1b9bff;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  nav ul1 {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul1 li1 {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul1 li1 a {
+    font-size: 20px;
+  }
+  a.active,
+  a:hover,
+  a.active:hover {
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul1 {
+    left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+
+  font-family: sans-serif;
+  font-weight: 100;
+}
+.container {
+  width: 90%;
+  position: absolute;
+  align-self: center;
+  padding-left: 200px;
+   
+  top: 50%;
+  left: 52%;
+  max-height: 600px;
+  overflow-y: scroll;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+table {
+  width: 100%;
+  margin-right: 0%;
+  align-content: center;
+  align-items: center;
+  
+  
+  
+  height: 800px;
+  
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+  /* additional table styles */
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #050101;
+}
+th {
+  text-align: left;
+}
+thead th {
+  background-color: #55608f;
+}
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+  position: relative;
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
 }
